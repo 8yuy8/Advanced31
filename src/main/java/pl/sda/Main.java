@@ -5,9 +5,32 @@ public class Main {
 
         createCarsBasic();
 
+        CarOption first = new CarOption();
+        CarOption scnd = new CarOption();
+
+        first.setPrice(13);
+        first.setName("Radyjko");
+        first.setChosenOne(true);
+
+        scnd.setPrice(13000);
+        scnd.setName("DiamondRadyjko");
+        scnd.setChosenOne(true);
+
+        CarOption[] tab = new CarOption[2];
+        tab[0] = first;
+        tab[1] = scnd;
+
+        CarOption[] tab2 = new CarOption[] {first, scnd};
+
+        Car car = new Car();
+        car.setModel("Fabia");
+        car.setManufacturer("Skoda");
+        car.setOptions(tab);
+
+        System.out.println();
     }
 
-    private static void createCarsBasic(){
+    private static void createCarsBasic() {
         Car car = new Car();
         car.setModel("Dodge");
         car.setManufacturer("Bułka");
