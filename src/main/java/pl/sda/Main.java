@@ -4,7 +4,28 @@ public class Main {
     public static void main(String[] args) {
 
         createCarsBasic();
+        createCarsWithOptions();
 
+        Person person1 = new Person();
+        Person person2 = new Person();
+
+        person1.setFirstName("Anna");
+        person2.setFirstName("Anna");
+
+        person1.setPesel("88091231213");
+        person2.setPesel("88091231213");
+
+        person1.setSurname("nowakowski");
+        person2.setSurname("nowakowawski");
+
+        System.out.println(person1 == person2);
+        System.out.println(person1.equals(person2));
+        System.out.println(person1.hashCode()==person2.hashCode());
+
+
+    }
+
+    private static void createCarsWithOptions(){
         CarOption first = new CarOption();
         CarOption scnd = new CarOption();
 
